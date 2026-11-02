@@ -2,6 +2,10 @@
 	"name": "buhowski.dev",
 	"version": "4.2.0",
 	"private": true,
+	"packageManager": "yarn@1.22.22",
+	"engines": {
+		"node": ">=20 <23"
+	},
 	"dependencies": {
 		"@testing-library/jest-dom": "^5.14.1",
 		"@testing-library/react": "^13.0.0",
@@ -22,12 +26,10 @@
 		"web-vitals": "^2.1.0"
 	},
 	"devDependencies": {
-		"@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-		"netlify-cli": "^26.2.0"
+		"@babel/plugin-proposal-private-property-in-object": "^7.21.11"
 	},
 	"scripts": {
 		"dev": "react-scripts start",
-		"dev:netlify": "netlify dev",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject"
