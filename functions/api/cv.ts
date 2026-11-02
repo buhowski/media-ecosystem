@@ -2,7 +2,7 @@ const FILE_ID = '12rOT1Pa4Z-Usau2Xkh-QTXweDTZJJTKvadrJKmRpCk0';
 const FILE_NAME = 'CV_Olexander_Tsiomakh_Frontend.pdf';
 const EXPORT_URL = `https://docs.google.com/document/d/${FILE_ID}/export?format=pdf`;
 
-// Proxy Google Docs PDF download
+// Proxy Google Docs PDF download.
 export const onRequestGet = async () => {
 	try {
 		const response = await fetch(EXPORT_URL, {
