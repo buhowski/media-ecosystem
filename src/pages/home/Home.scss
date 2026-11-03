@@ -52,10 +52,6 @@
 		}
 
 		@include mobile {
-			font-size: 56px;
-		}
-
-		@include mobileSmall {
 			font-size: 54px;
 		}
 
@@ -89,8 +85,8 @@
 		}
 
 		@include mobile {
-			font-size: 23px;
-			letter-spacing: 1.2px;
+			font-size: 22px;
+			letter-spacing: 1.4px;
 		}
 
 		@include mobileSmall {
@@ -106,17 +102,21 @@
 					content: '';
 					flex-shrink: 0;
 					display: block;
-					background-color: currentColor;
-					margin-inline: 16px;
-					opacity: 0.6;
-					width: 1px;
+					margin-inline: 17px;
+					width: 0;
 					align-self: stretch;
+					border-left: 1px solid currentColor;
+					opacity: 0.56;
 
 					@include tablet {
-						margin-inline: 12px;
+						margin-inline: 14px;
 					}
 
 					@include mobile {
+						margin-inline: 12px;
+					}
+
+					@include mobileSmall {
 						margin-inline: 10px;
 					}
 				}
