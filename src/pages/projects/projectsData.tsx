@@ -14,24 +14,12 @@ const projectsData = [
 	{
 		img: bgStartup,
 		url: pathToVision,
-		urlCode: 'https://github.com/buhowski/digital-ecosystem',
-		name: 'Digital Ecosystem',
+		urlCode: 'https://github.com/buhowski/media-ecosystem',
+		name: 'Media Ecosystem',
 		year: '2026',
 		description:
-			'100% Lighthouse score achieved. Multilingual PWA architecture. Full-cycle startup ecosystem.',
-		skills: [
-			'React',
-			'TypeScript',
-			'Node.js',
-			'SCSS',
-			'HTML5',
-			'PWA',
-			'i18n',
-			'SEO',
-			'Core Web Vitals',
-			'CI/CD',
-			'UI/UX',
-		],
+			'Designed and developed a multilingual cross-industry startup ecosystem. Built reusable frontend architecture with animated SPA routing, dynamic Markdown content, technical SEO, and serverless functionality.',
+		skills: ['React', 'TypeScript', 'SCSS', 'i18n', 'PWA'],
 		alt: 'Media Ecosystem startup homepage by Olexander Buhowski - Another Dimension Universe Vision, React TypeScript frontend developer portfolio, UI UX web design, PWA, SEO optimization, custom web development showcase',
 	},
 
