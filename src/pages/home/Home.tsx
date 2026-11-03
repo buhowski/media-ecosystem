@@ -17,7 +17,12 @@ const Home = () => {
 					<span>{nickName}</span>
 				</h1>
 
-				<h2 className='name-container__position'>Front-End Developer</h2>
+				{/* <h2 className='name-container__position'>Front-End Developer</h2> */}
+				<h2 className='name-container__position'>
+					<span>Explorer</span>
+					<span>Developer</span>
+					<span>Creator</span>
+				</h2>
 
 				<Socials
 					socialData={socialData}
