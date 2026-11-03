@@ -132,8 +132,12 @@ svg {
 
 	@include mobile {
 		margin-top: 35px;
-		letter-spacing: 4px;
-		font-size: 36px;
+		letter-spacing: 3px;
+		font-size: 35px;
+	}
+
+	@include mobileSmall {
+		font-size: 31px;
 	}
 }
 

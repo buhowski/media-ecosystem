@@ -11,7 +11,9 @@ const Projects = () => {
 		<div className='wrapper wrapper--projects'>
 			<PageHelmet metaTags={portfolioMetaTags} />
 
-			<h1 className='base-title h1'>Some Works</h1>
+			<h1 className='base-title h1'>Selected Projects</h1>
+
+			<h2 className='works-desc'>Frontend & UI engineering</h2>
 
 			<div className='projects-container'>
 				{projectsData.map(({ img, url, urlCode, name, year, description, skills, alt }, i) => (

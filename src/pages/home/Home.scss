@@ -52,7 +52,11 @@
 		}
 
 		@include mobile {
-			font-size: 52px;
+			font-size: 56px;
+		}
+
+		@include mobileSmall {
+			font-size: 54px;
 		}
 
 		span {

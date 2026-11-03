@@ -11,10 +11,6 @@
 
 	.base-title {
 		margin-bottom: 40px;
-
-		@include mobileSmall {
-			font-size: 31px;
-		}
 	}
 }
 
