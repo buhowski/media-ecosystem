@@ -20,7 +20,7 @@ const projectsData = [
 		year: '2026',
 		description:
 			'Designed and developed a multilingual cross-industry startup ecosystem. Built reusable frontend architecture with animated SPA routing, dynamic Markdown content, technical SEO, and serverless functionality.',
-		skills: ['React', 'TypeScript', 'SCSS', 'i18n', 'PWA'],
+		skills: ['React', 'TypeScript', 'SCSS', 'i18n', 'PWA', 'UI/UX'],
 		alt: 'Media Ecosystem startup homepage by Olexander Buhowski - Another Dimension Universe Vision, React TypeScript frontend developer portfolio, UI UX web design, PWA, SEO optimization, custom web development showcase',
 	},
 
