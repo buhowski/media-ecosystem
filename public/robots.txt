@@ -8,6 +8,7 @@ User-agent: GPTBot
 User-agent: ClaudeBot
 User-agent: anthropic-ai
 User-agent: CCBot
+User-agent: Google-Extended
 User-agent: Applebot-Extended
 User-agent: Meta-ExternalAgent
 User-agent: FacebookBot
