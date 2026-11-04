@@ -1,9 +1,7 @@
-# Search, indexing, AI citations: allowed
 User-agent: *
 Allow: /
 Content-Signal: search=yes, ai-input=yes, ai-train=no, use=reference
 
-# AI training: blocked
 User-agent: GPTBot
 User-agent: ClaudeBot
 User-agent: Claude-Web
@@ -32,5 +30,4 @@ User-agent: AI2Bot-Dolma
 User-agent: ICC-Crawler
 Disallow: /
 
-# Sitemap
 Sitemap: https://buhowski.dev/sitemap.xml
