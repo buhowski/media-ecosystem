@@ -8,10 +8,10 @@
 	@include tablet {
 		padding-bottom: 40px;
 	}
+}
 
-	.base-title {
-		margin-bottom: 40px;
-	}
+.title-block {
+	margin-bottom: 40px;
 }
 
 .about-item {
@@ -171,10 +171,11 @@
 			left: -27%;
 			transform: rotate(-8deg);
 			text-align: left;
+			width: 360px;
 
 			@include mobile {
-				width: 65%;
-				top: -8%;
+				width: 220px;
+				top: -5%;
 				left: -1%;
 			}
 		}

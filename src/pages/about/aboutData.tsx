@@ -15,8 +15,10 @@ const dotsData = [
 	},
 	{
 		classItem: 'keyboard',
-		titleSub: 'Core:',
-		title: 'React, TypeScript, Next.js, Node.js, HTML5, CSS3, SCSS, JavaScript',
+		title:
+			'Engineering the front of the internet. Architecting an alternative universe powered by the Counterculture OS of Reality.',
+		// titleSub: 'Stack:',
+		// title: 'React, TypeScript, Next.js, Node.js, HTML5, CSS3, SCSS, JavaScript',
 		img: keyboardIcon,
 	},
 	{

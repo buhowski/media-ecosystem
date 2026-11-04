@@ -1,4 +1,5 @@
 import bgFaberBooks from './images/faber-books.jpg';
+import bgCarService from './images/car-service-poster.jpg';
 import bgBentley from './images/bentley-skinner.jpg';
 import bgStartup from '../../assets/startup/another-dimension-universe-vision-by-olexander-buhowski.jpg';
 import nascentdesign from './images/nascent-design-portfolio-frontend.jpg';
@@ -24,13 +25,32 @@ const projectsData = [
 	},
 
 	{
+		img: bgCarService,
+		url: `https://sto-porshen.pages.dev`,
+		urlCode: 'https://github.com/buhowski/car-service',
+		name: 'Car Repair Service',
+		year: '2026',
+		description: 'Business website. Interactive visual components. Fully responsive layout.',
+		skills: [
+			'Astro',
+			'TypeScript',
+			'SCSS',
+			'Pages CMS',
+			'Telegram Bot API',
+			'Accessibility',
+			'SEO',
+		],
+		alt: 'Business website for an automotive car repair service in Lviv, Ukraine. Animated interactive web design using Astro, TypeScript, SCSS, Pages CMS for frontend developer portfolio project, custom web development showcase by Olexander Buhowski',
+	},
+
+	{
 		img: nascentdesign,
 		url: `https://nascentdesign.com`,
 		name: 'Nascent Design',
 		year: '2022',
 		description: 'Fluid GSAP animations. Interactive visual components. Fully responsive layout.',
 		skills: ['JavaScript', 'GSAP', 'SCSS'],
-		alt: 'Nascent Design website homepage - GSAP animated interactive web design, JavaScript SCSS frontend developer portfolio project, custom web development showcase by Olexander Buhowski',
+		alt: 'Nascent Design website homepage - GSAP animated interactive web design, JavaScript, SCSS frontend developer portfolio project, custom web development showcase by Olexander Buhowski',
 	},
 
 	{

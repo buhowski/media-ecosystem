@@ -25,7 +25,9 @@ const About = () => {
 		<div className='wrapper about-wrapper'>
 			<PageHelmet metaTags={aboutMetaTags} />
 
-			<h1 className='base-title h1'>Me Starter Pack</h1>
+			<div className='title-block'>
+				<h1 className='base-title h1'>Me Starter Pack</h1>
+			</div>
 
 			<div className='about-info'>
 				<div className=''>

@@ -13,7 +13,7 @@ const Projects = () => {
 
 			<h1 className='base-title h1'>Selected Projects</h1>
 
-			<h2 className='works-desc'>Frontend & UI engineering</h2>
+			<p className='base-desc'>Frontend & UI engineering</p>
 
 			<div className='projects-container'>
 				{projectsData.map(({ img, url, urlCode, name, year, description, skills, alt }, i) => (

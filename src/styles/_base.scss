@@ -141,6 +141,14 @@ svg {
 	}
 }
 
+.base-desc {
+	font-family: $LouisGeorgeCaf;
+	letter-spacing: 1.5px;
+	margin-top: 20px;
+	color: $nav-title;
+	font-size: 21px;
+}
+
 .page.slide-enter .markdown-loading .preloader,
 .page.slide-enter .slider-loader .preloader,
 .page.slide-enter .header,
