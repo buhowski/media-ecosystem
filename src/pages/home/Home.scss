@@ -16,15 +16,15 @@
 
 .name-container {
 	align-self: center;
-	margin: -160px 0 42px;
+	margin: -140px 0 42px;
 	width: 40%;
 
 	@media screen and (min-width: 851px) and (max-height: 630px) {
-		margin-top: -40px;
+		margin-top: -50px;
 	}
 
 	@include heightTopMinMax {
-		margin-top: -100px;
+		margin-top: -50px;
 	}
 
 	@include tabletSmall {

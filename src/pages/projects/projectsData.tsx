@@ -19,7 +19,7 @@ const projectsData = [
 		name: 'Media Ecosystem',
 		year: '2026',
 		description:
-			'Designed and developed a multilingual cross-industry startup ecosystem. Built reusable frontend architecture with animated SPA routing, dynamic Markdown content, technical SEO, and serverless functionality.',
+			'Designed and developed cross-industry startup. Built reusable architecture with animated routing, dynamic Markdown content, and serverless functionality.',
 		skills: ['React', 'TypeScript', 'SCSS', 'i18n', 'PWA', 'UI/UX'],
 		alt: 'Media Ecosystem startup homepage by Olexander Buhowski - Another Dimension Universe Vision, React TypeScript frontend developer portfolio, UI UX web design, PWA, SEO optimization, custom web development showcase',
 	},
@@ -28,7 +28,7 @@ const projectsData = [
 		img: bgCarService,
 		url: `https://sto-porshen.pages.dev`,
 		urlCode: 'https://github.com/buhowski/car-service',
-		name: 'Car Repair Service',
+		name: 'Car Service',
 		year: '2026',
 		description: 'Business website. Interactive visual components. Fully responsive layout.',
 		skills: [

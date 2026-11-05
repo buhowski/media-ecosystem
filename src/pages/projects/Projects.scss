@@ -137,7 +137,7 @@
 		// .project-description__year
 		&__year {
 			color: $subtitle-color;
-			font-size: 15px;
+			font-size: 16px;
 			font-family: $LouisGeorgeCafBold;
 			letter-spacing: 0.8px;
 		}
@@ -145,8 +145,8 @@
 		// .project-description__text
 		&__text {
 			margin-bottom: 18px;
-			font-size: 14px;
-			line-height: 1.5;
+			font-size: 15px;
+			line-height: 1.4;
 			color: #c8c8c8;
 		}
 
@@ -163,9 +163,9 @@
 				background: rgba(#000000, 0.5);
 				border: 0.5px solid rgba(255, 255, 255, 0.24);
 				color: $subtitle-color;
-				padding: 3px 8px;
+				padding: 4px 8px;
 				border-radius: 4px;
-				font-size: 12px;
+				font-size: 14px;
 			}
 		}
 
@@ -180,13 +180,12 @@
 			font-family: $LouisGeorgeCafBold;
 			padding: 8px 10px;
 			flex-grow: 1;
-			width: 100%;
-			max-width: 150px;
+			max-width: 135px;
 			letter-spacing: 1.4px;
 			border-radius: 10px;
 			color: var(--action-color);
-			border: 1px solid rgba($link-color, 0.55);
-			background-color: #000000;
+			border: 1px solid rgba($link-color, 0.5);
+			background-color: #111111;
 			transition:
 				box-shadow $transition-s,
 				background-color $transition-s,
@@ -250,7 +249,7 @@
 		}
 
 		.project-link__img {
-			transform: scale(1.28);
+			transform: scale(1.16);
 		}
 	}
 
