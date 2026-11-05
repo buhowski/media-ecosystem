@@ -1,24 +1,24 @@
-# Navigation
+# Table of Content
 
-## Frontend Development • UI/UX Engineering
+## Frontend Development • UI Engineering
 
 - [Portfolio](https://buhowski.dev)
 - [CV](https://buhowski.dev/cv)
 
-## Counterculture Media Ecosystem
+## Media Ecosystem
 
-Developed a market colonization strategy and launch-ready concepts for magazine, film, gamedev, and tech.
+Developed a market colonization strategy and launch-ready concepts for magazine, shows, film, gamedev, and tech.
 
 - [Manifesto](https://buhowski.dev/vision)
 
 ### Vectors
 
+If you would like to join or have ideas on how to bring this to life — reach out. Let's colonize this reality together.
+
 - [Magazine: Strategy & MVP](https://buhowski.dev/mvp)
 - [Cinema Development](https://buhowski.dev/cinema)
 - [Gamedev Dimension](https://buhowski.dev/gamedev)
-- [Presentation Tools: Video Shows & Experiments](https://buhowski.dev/pilots)
-
-If you know how to scale this — reach out.
+- [Tools: Video Shows & Experiments](https://buhowski.dev/pilots)
 
 <!-- ## Collab
 
