@@ -1,0 +1,4 @@
+Contact: mailto:buhowski.inc@gmail.com
+Expires: 2030-09-16T00:00:00.000Z
+Preferred-Languages: en, ru, uk
+Canonical: https://buhowski.dev/.well-known/security.txt
