@@ -23,8 +23,6 @@ User-agent: PanguBot
 User-agent: Timpibot
 User-agent: MistralAI-Training
 User-agent: KimiBot
-User-agent: PerplexityBot
-User-agent: YouBot
 User-agent: AI2Bot
 User-agent: AI2Bot-Dolma
 User-agent: ICC-Crawler
