@@ -1,5 +1,5 @@
 // Images
-import planPoster from '../../../assets/startup/another-dimension-universe-vision-by-olexander-buhowski.jpg';
+import planPoster from '../../../assets/startup/counterculture-ecosystem-universe-another-dimension-startup-vision-by-olexander-buhowski.jpg';
 import posterProjectsDev from '../../../assets/startup/brain.jpg';
 import writer from '../../../assets/startup/writer.webp';
 import posterOnceInUkraine from '../../../assets/startup/cinema/once.webp';

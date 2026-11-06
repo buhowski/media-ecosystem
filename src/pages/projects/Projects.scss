@@ -123,7 +123,7 @@
 			color: $body-color;
 			font-family: $LouisGeorgeCafBold;
 			letter-spacing: 1px;
-			font-size: 21px;
+			font-size: 22px;
 			overflow: hidden;
 			text-overflow: ellipsis;
 			white-space: nowrap;
@@ -146,13 +146,12 @@
 		&__text {
 			margin-bottom: 18px;
 			font-size: 15px;
-			line-height: 1.4;
 			color: #c8c8c8;
 		}
 
 		// .project-description__items
 		&__items {
-			font-family: $LouisGeorgeCaf;
+			font-family: $LouisGeorgeCafBold;
 			display: flex;
 			flex-wrap: wrap;
 			gap: 6px;
@@ -160,12 +159,13 @@
 
 			span {
 				display: inline-block;
-				background: rgba(#000000, 0.5);
-				border: 0.5px solid rgba(255, 255, 255, 0.24);
+				background: rgba(#000000, 0.98);
+				border: 1px solid rgba($subtitle-color, 0.32);
 				color: $subtitle-color;
-				padding: 4px 8px;
+				padding: 4px 10px;
 				border-radius: 4px;
-				font-size: 14px;
+				font-size: 13px;
+				letter-spacing: 0.2px;
 			}
 		}
 
