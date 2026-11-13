@@ -1,10 +1,10 @@
 // Scrollbar styles
 $scrollbar-bg: transparent;
-$scrollbar-thumb: rgba(#fff, 0.2);
-$scrollbar-thumb-hover: rgba(#0082d8, 0.5);
+$scrollbar-thumb: rgba(#c2c7cf, 0.2);
+$scrollbar-thumb-hover: rgba(#0082d8, 0.3);
 $scrollbar-radius: 10px;
-$scrollbar-width: 4px;
-$scrollbar-mob-width: 2px;
+$scrollbar-width: 2px;
+$scrollbar-mob-width: 1px;
 
 :root {
 	color-scheme: dark light;
@@ -48,6 +48,12 @@ body,
 	overflow-y: auto;
 	scrollbar-gutter: stable;
 
+	// Firefox (and some other Gecko-based browsers)
+	@supports (-moz-appearance: none) {
+		scrollbar-width: thin;
+		scrollbar-color: $scrollbar-thumb $scrollbar-bg;
+	}
+
 	// WebKit (Chrome, Safari, Edge, iOS)
 	&::-webkit-scrollbar {
 		width: $scrollbar-width;
@@ -71,12 +77,6 @@ body,
 		&:hover {
 			background-color: $scrollbar-thumb-hover;
 		}
-	}
-
-	// Firefox (and some other Gecko-based browsers)
-	@supports (-moz-appearance: none) {
-		scrollbar-width: thin;
-		scrollbar-color: $scrollbar-thumb $scrollbar-bg;
 	}
 }
 
