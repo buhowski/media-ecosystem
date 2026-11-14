@@ -1,10 +1,9 @@
 @import '../../styles/variables.scss';
 
-:root {
-	--hover-delay: #{$transition-s} #{$transition-s};
-	--radius: 12px;
+.wrapper--projects {
+	--radius: 16px;
 	--action-color: #{$link-color};
-	--border-color: #46494d;
+	--border-color: rgba(255, 255, 255, 0.14);
 }
 
 .projects-container {
@@ -12,10 +11,11 @@
 	padding-bottom: 120px;
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-	gap: 50px;
+	gap: clamp(24px, 3vw, 36px);
 
 	@include mobile {
 		grid-template-columns: 1fr;
+		gap: 24px;
 	}
 }
 
@@ -23,37 +23,29 @@
 	width: 100%;
 	position: relative;
 	border-radius: var(--radius);
-	transform: translate(0, 0);
 	transition:
-		transform $transition-s,
-		box-shadow $transition-s,
-		border-color $transition-s;
-	box-shadow: 0 4px 26px rgba(#000000, 0.6);
-
-	@include tablet {
-		box-shadow: 0 2px 12px rgba(#000000, 0.6);
-	}
+		transform $transition-l cubic-bezier(0.2, 0.75, 0.25, 1),
+		box-shadow $transition-l;
+	box-shadow: 0 8px 26px rgba(#000000, 0.46);
 
 	&::before {
 		content: '';
 		display: block;
 		position: absolute;
-		top: 1px;
-		left: 1px;
-		width: calc(100% - 10px);
-		height: calc(100% - 10px);
-		background-color: $blue-main;
-		background: $transition-gradient;
+		top: 4px;
+		left: 4px;
+		width: calc(100% - 8px);
+		height: calc(100% - 8px);
+		background: linear-gradient(135deg, rgba($blue-light, 0.52), rgba($blue-deep, 0.82));
 		border-radius: var(--radius);
-		transform: translateY(0);
 		transition:
-			transform var(--hover-delay),
-			height var(--hover-delay),
-			width var(--hover-delay);
+			transform $transition-l,
+			width $transition-l,
+			height $transition-l;
 
 		@include mobile {
-			width: calc(100% - 5px);
-			height: calc(100% - 5px);
+			width: calc(100% - 6px);
+			height: calc(100% - 6px);
 		}
 	}
 
@@ -73,12 +65,13 @@
 		overflow: hidden;
 		border: 1px solid var(--border-color);
 		border-radius: var(--radius);
-
-		transition: box-shadow var(--hover-delay);
+		transition:
+			border-color $transition-l,
+			box-shadow $transition-l;
 
 		@include mobile {
 			aspect-ratio: auto;
-			height: 420px;
+			height: auto;
 		}
 	}
 
@@ -88,42 +81,49 @@
 		bottom: 0;
 		left: 0;
 		width: 100%;
-		background-color: rgba(#000000, 0.89);
-		backdrop-filter: blur(6px);
-		box-shadow: 0 0 12px rgba(#000000, 0.65);
-		color: $text-color;
+		background: linear-gradient(180deg, rgba($bg-darker, 0.88) 0%, rgba($bg-darkest, 0.97) 100%);
+		backdrop-filter: blur(14px);
+		box-shadow: 0 -12px 36px rgba(#000000, 0.24);
+		color: $body-color;
 		overflow: hidden;
 		z-index: 4;
-		transform: translateY(calc(100% - 67px));
-		transition: transform var(--hover-delay);
-		border-top: 1px solid var(--border-color);
+		transform: translateY(calc(100% - 68px));
+		transition: transform 320ms cubic-bezier(0.2, 0.75, 0.25, 1);
+		border-top: 1px solid rgba(255, 255, 255, 0.12);
 
 		// .project-description__container
 		&__container {
-			padding: 20px 15px 30px;
+			padding: 20px 24px 24px;
 		}
 
 		// .project-description__header
 		&__header {
 			display: flex;
 			justify-content: space-between;
-			align-items: baseline;
-			margin-bottom: 20px;
-			gap: 10px;
+			align-items: center;
+			margin-bottom: 14px;
+			gap: 16px;
 
-			&:hover {
+			&:hover,
+			&:focus-visible {
 				.project-description__name {
 					color: var(--action-color);
 				}
+			}
+
+			&:focus-visible {
+				outline: 2px solid $blue-light;
+				outline-offset: 4px;
 			}
 		}
 
 		// .project-description__name
 		&__name {
-			color: $body-color;
+			color: $light-color;
 			font-family: $LouisGeorgeCafBold;
-			letter-spacing: 1px;
-			font-size: 22px;
+			font-size: clamp(20px, 2vw, 24px);
+			line-height: 1.15;
+			letter-spacing: 0.02em;
 			overflow: hidden;
 			text-overflow: ellipsis;
 			white-space: nowrap;
@@ -131,22 +131,30 @@
 
 			span {
 				color: var(--action-color);
+				transition: color $transition-s;
 			}
 		}
 
 		// .project-description__year
 		&__year {
-			color: $subtitle-color;
-			font-size: 16px;
+			flex-shrink: 0;
+			padding: 4px 9px;
+			border: 1px solid rgba(255, 255, 255, 0.12);
+			border-radius: 999px;
+			background: rgba(255, 255, 255, 0.045);
+			color: rgba($body-color, 0.7);
+			font-size: 12px;
 			font-family: $LouisGeorgeCafBold;
-			letter-spacing: 0.8px;
+			letter-spacing: 0.08em;
 		}
 
 		// .project-description__text
 		&__text {
-			margin-bottom: 18px;
-			font-size: 15px;
-			color: #c8c8c8;
+			max-width: 64ch;
+			margin-bottom: 16px;
+			color: rgba($body-color, 0.82);
+			font-size: 14px;
+			line-height: 1.6;
 		}
 
 		// .project-description__items
@@ -154,55 +162,69 @@
 			font-family: $LouisGeorgeCafBold;
 			display: flex;
 			flex-wrap: wrap;
-			gap: 6px;
-			margin-bottom: 30px;
+			gap: 8px;
+			margin-bottom: 20px;
 
 			span {
-				display: inline-block;
-				background: rgba(#000000, 0.98);
-				border: 1px solid rgba($subtitle-color, 0.32);
-				color: $subtitle-color;
-				padding: 4px 12px;
-				border-radius: 100px;
-				font-size: 13px;
-				letter-spacing: 0.2px;
+				display: inline-flex;
+				align-items: center;
+				padding: 5px 10px;
+				border: 1px solid rgba(255, 255, 255, 0.12);
+				border-radius: 999px;
+				background: rgba(255, 255, 255, 0.045);
+				color: rgba($body-color, 0.78);
+				font-size: 12px;
+				line-height: 1.2;
+				letter-spacing: 0.02em;
 			}
 		}
 
 		// .project-description__actions
 		&__actions {
 			display: flex;
-			gap: 25px;
+			gap: 12px;
 
 			a {
 				@include link-after-icon(
 					url('../assets/svg/arrow-external.svg'),
+					$size: 14px,
 					$margin-inline: 8px 0,
-					$transform: translateY(0.5px),
-					$opacity: 0.68
+					$transform: translateY(1px)
 				);
 			}
 		}
 
 		&__action {
+			flex: 1 1 100px;
+			max-width: 148px;
+			padding: 10px 14px;
+			border: 1px solid rgba($link-color, 0.3);
+			border-radius: 8px;
+			background: rgba($link-color, 0.05);
+			color: var(--action-color);
 			text-align: center;
 			font-family: $LouisGeorgeCafBold;
-			padding: 8px 10px;
-			flex-grow: 1;
-			max-width: 135px;
-			letter-spacing: 1.4px;
-			border-radius: 100px;
-			color: var(--action-color);
-			border: 1px solid rgba($link-color, 0.5);
-			background-color: #111111;
+			font-size: 13px;
+			letter-spacing: 0.04em;
 			transition:
 				box-shadow $transition-s,
 				background-color $transition-s,
-				color $transition-s;
+				border-color $transition-s,
+				color $transition-s,
+				transform $transition-s;
 
-			&:hover {
-				background-color: var(--action-color);
-				color: #000000;
+			&:hover,
+			&:focus-visible {
+				transform: translateY(-1px);
+				border-color: rgba($link-color, 0.72);
+				background-color: rgba($link-color, 0.14);
+				box-shadow: 0 0 0 3px rgba($link-color, 0.08);
+				color: $light-color;
+			}
+
+			&:focus-visible {
+				outline: 2px solid $blue-light;
+				outline-offset: 3px;
 			}
 		}
 	}
@@ -213,6 +235,14 @@
 		height: 100%;
 		background-color: #000000;
 
+		&__img {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transition: transform $transition-l;
+		}
+
 		&:hover ~ .project-description {
 			.project-description__name {
 				color: var(--action-color);
@@ -220,50 +250,78 @@
 		}
 	}
 
-	&:hover {
+	&:focus-within {
 		z-index: 2;
-		transform: translate(-10px, -20px);
-
-		@include mobile {
-			transform: translate(0, -20px);
-		}
-
-		&::before {
-			width: 100%;
-			height: 100%;
-			transform: translate(23px, 25px);
-
-			@include mobile {
-				width: calc(100% - 2px);
-				transform: translate(0, 25px);
-			}
-		}
-
-		.project__inner {
-			box-shadow: 6px 6px 12px rgba(#000000, 0.5);
-
-			@include mobile {
-				box-shadow: 0 5px 10px rgba(#000000, 0.5);
-			}
-		}
-
 		.project-description {
 			transform: translateY(0);
 		}
 
-		.project-description__name {
-			span {
-				animation: LowLine 0.4s infinite;
+		.project__inner {
+			border-color: rgba($blue-light, 0.42);
+		}
+	}
+
+	@media (hover: hover) and (pointer: fine) {
+		&:hover {
+			z-index: 2;
+			transform: translateY(-15px);
+			box-shadow: 0 16px 32px rgba(#000000, 0.48);
+
+			&::before {
+				width: 100%;
+				height: 100%;
+				transform: translate(15px, 15px);
+			}
+
+			.project-link__img {
+				transform: scale(1.18);
+			}
+
+			.project__inner {
+				border-color: #20648f;
+				box-shadow: 4px 4px 18px rgba(#000000, 0.34);
+			}
+
+			.project-description {
+				transform: translateY(0);
+			}
+
+			.project-description__name span {
+				animation: LowLine 0.6s infinite;
 			}
 		}
+	}
 
-		.project-link__img {
-			transform: scale(1.16);
+	@include mobile {
+		&-link {
+			height: 220px;
+		}
+
+		&-description {
+			position: relative;
+			background: linear-gradient(180deg, rgba($bg-darker, 0.98) 0%, rgba($bg-darkest, 1) 100%);
+			backdrop-filter: none;
+			box-shadow: none;
+			transform: none;
+		}
+
+		&-description__container {
+			padding: 20px;
 		}
 	}
 
 	img {
-		transition: transform $transition-l;
 		will-change: transform;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.project,
+	.project::before,
+	.project__inner,
+	.project-description,
+	.project img,
+	.project-description__action {
+		transition: none;
 	}
 }
