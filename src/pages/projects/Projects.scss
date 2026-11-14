@@ -11,11 +11,11 @@
 	padding-bottom: 120px;
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-	gap: clamp(24px, 3vw, 36px);
+	gap: 50px;
 
-	@include mobile {
-		grid-template-columns: 1fr;
-		gap: 24px;
+	@include tabletSmall {
+		grid-template-columns: 100%;
+		gap: 40px;
 	}
 }
 
@@ -25,28 +25,28 @@
 	border-radius: var(--radius);
 	transition:
 		transform $transition-l cubic-bezier(0.2, 0.75, 0.25, 1),
-		box-shadow $transition-l;
-	box-shadow: 0 8px 26px rgba(#000000, 0.46);
+		box-shadow $transition-l cubic-bezier(0.2, 0.75, 0.25, 1);
+	box-shadow: 0 10px 28px rgba(#000000, 0.48);
+
+	@include tabletSmall {
+		display: flex;
+	}
 
 	&::before {
 		content: '';
 		display: block;
 		position: absolute;
-		top: 4px;
-		left: 4px;
-		width: calc(100% - 8px);
-		height: calc(100% - 8px);
-		background: linear-gradient(135deg, rgba($blue-light, 0.52), rgba($blue-deep, 0.82));
+		top: 5px;
+		left: 5px;
+		width: calc(100% - 10px);
+		height: calc(100% - 10px);
+		background: linear-gradient(145deg, rgba($blue-light, 0.68), rgba($blue-deep, 0.86));
 		border-radius: var(--radius);
 		transition:
 			transform $transition-l,
 			width $transition-l,
+			position $transition-l,
 			height $transition-l;
-
-		@include mobile {
-			width: calc(100% - 6px);
-			height: calc(100% - 6px);
-		}
 	}
 
 	&:first-child {
@@ -54,6 +54,10 @@
 			object-fit: contain;
 			object-position: center 38%;
 			height: 100%;
+
+			@include tabletSmall {
+				object-fit: cover;
+			}
 		}
 	}
 
@@ -69,9 +73,35 @@
 			border-color $transition-l,
 			box-shadow $transition-l;
 
-		@include mobile {
+		@include tabletSmall {
 			aspect-ratio: auto;
+		}
+	}
+
+	// .project-link
+	&-link {
+		display: block;
+		height: 100%;
+		background-color: #000000;
+
+		@include tabletSmall {
 			height: auto;
+			aspect-ratio: 16 / 10;
+		}
+
+		&__img {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: top center;
+			transition: transform $transition-l;
+		}
+
+		&:hover ~ .project-description {
+			.project-description__name {
+				color: var(--action-color);
+			}
 		}
 	}
 
@@ -81,19 +111,34 @@
 		bottom: 0;
 		left: 0;
 		width: 100%;
-		background: linear-gradient(180deg, rgba($bg-darker, 0.88) 0%, rgba($bg-darkest, 0.97) 100%);
-		backdrop-filter: blur(14px);
-		box-shadow: 0 -12px 36px rgba(#000000, 0.24);
+		background: linear-gradient(165deg, rgba($bg-darker, 0.88) 0%, rgba($bg-darkest, 0.98) 100%);
+		backdrop-filter: blur(10px);
+		box-shadow: 0 -10px 28px rgba(#000000, 0.32);
 		color: $body-color;
 		overflow: hidden;
 		z-index: 4;
-		transform: translateY(calc(100% - 68px));
-		transition: transform 320ms cubic-bezier(0.2, 0.75, 0.25, 1);
+		transform: translateY(calc(100% - 67px));
 		border-top: 1px solid rgba(255, 255, 255, 0.12);
+		transition:
+			transform $transition-l cubic-bezier(0.2, 0.75, 0.25, 1),
+			border-color $transition-l cubic-bezier(0.2, 0.75, 0.25, 1);
+
+		@include tabletSmall {
+			position: relative;
+			background: linear-gradient(180deg, rgba($bg-darker, 0.98) 0%, rgba($bg-darkest, 1) 100%);
+			backdrop-filter: none;
+			box-shadow: none;
+			transform: none;
+			height: 100%;
+		}
 
 		// .project-description__container
 		&__container {
-			padding: 20px 24px 24px;
+			padding: 20px 25px 25px;
+
+			@include tabletSmall {
+				padding: 25px 15px 30px;
+			}
 		}
 
 		// .project-description__header
@@ -101,8 +146,8 @@
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
-			margin-bottom: 14px;
-			gap: 16px;
+			margin-bottom: 18px;
+			gap: 6px;
 
 			&:hover,
 			&:focus-visible {
@@ -121,13 +166,12 @@
 		&__name {
 			color: $light-color;
 			font-family: $LouisGeorgeCafBold;
-			font-size: clamp(20px, 2vw, 24px);
-			line-height: 1.15;
-			letter-spacing: 0.02em;
+			font-size: 20px;
+			letter-spacing: 0.04em;
+			transition: color $transition-s;
 			overflow: hidden;
 			text-overflow: ellipsis;
 			white-space: nowrap;
-			transition: color $transition-s;
 
 			span {
 				color: var(--action-color);
@@ -135,23 +179,30 @@
 			}
 		}
 
-		// .project-description__year
-		&__year {
+		// Shared badge styles
+		&__year,
+		&__items span {
+			display: inline-block;
 			flex-shrink: 0;
-			padding: 4px 9px;
-			border: 1px solid rgba(255, 255, 255, 0.12);
-			border-radius: 999px;
-			background: rgba(255, 255, 255, 0.045);
-			color: rgba($body-color, 0.7);
+			padding: 4px 12px;
+			border: 1px solid rgba(255, 255, 255, 0.14);
+			border-radius: 100px;
+			background: rgba(255, 255, 255, 0.065);
+			color: rgba($body-color, 0.82);
 			font-size: 12px;
 			font-family: $LouisGeorgeCafBold;
-			letter-spacing: 0.08em;
+			letter-spacing: 0.02em;
+		}
+
+		// .project-description__year
+		&__year {
+			letter-spacing: 0.1em;
+			padding-block: 5px;
 		}
 
 		// .project-description__text
 		&__text {
-			max-width: 64ch;
-			margin-bottom: 16px;
+			margin-bottom: 20px;
 			color: rgba($body-color, 0.82);
 			font-size: 14px;
 			line-height: 1.6;
@@ -159,30 +210,16 @@
 
 		// .project-description__items
 		&__items {
-			font-family: $LouisGeorgeCafBold;
 			display: flex;
 			flex-wrap: wrap;
-			gap: 8px;
-			margin-bottom: 20px;
-
-			span {
-				display: inline-flex;
-				align-items: center;
-				padding: 5px 10px;
-				border: 1px solid rgba(255, 255, 255, 0.12);
-				border-radius: 999px;
-				background: rgba(255, 255, 255, 0.045);
-				color: rgba($body-color, 0.78);
-				font-size: 12px;
-				line-height: 1.2;
-				letter-spacing: 0.02em;
-			}
+			gap: 6px;
+			margin-bottom: 30px;
 		}
 
 		// .project-description__actions
 		&__actions {
 			display: flex;
-			gap: 12px;
+			gap: 16px;
 
 			a {
 				@include link-after-icon(
@@ -194,18 +231,18 @@
 			}
 		}
 
+		// .project-description__action
 		&__action {
-			flex: 1 1 100px;
-			max-width: 148px;
+			width: 50%;
 			padding: 10px 14px;
-			border: 1px solid rgba($link-color, 0.3);
+			border: 1px solid rgba($link-color, 0.4);
 			border-radius: 8px;
-			background: rgba($link-color, 0.05);
+			background: rgba($link-color, 0.08);
 			color: var(--action-color);
 			text-align: center;
 			font-family: $LouisGeorgeCafBold;
 			font-size: 13px;
-			letter-spacing: 0.04em;
+			letter-spacing: 0.08em;
 			transition:
 				box-shadow $transition-s,
 				background-color $transition-s,
@@ -215,9 +252,9 @@
 
 			&:hover,
 			&:focus-visible {
-				transform: translateY(-1px);
+				transform: translateY(-4px);
 				border-color: rgba($link-color, 0.72);
-				background-color: rgba($link-color, 0.14);
+				background-color: rgba($link-color, 0.18);
 				box-shadow: 0 0 0 3px rgba($link-color, 0.08);
 				color: $light-color;
 			}
@@ -229,29 +266,9 @@
 		}
 	}
 
-	// .project-link
-	&-link {
-		display: block;
-		height: 100%;
-		background-color: #000000;
-
-		&__img {
-			display: block;
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-			transition: transform $transition-l;
-		}
-
-		&:hover ~ .project-description {
-			.project-description__name {
-				color: var(--action-color);
-			}
-		}
-	}
-
 	&:focus-within {
 		z-index: 2;
+
 		.project-description {
 			transform: translateY(0);
 		}
@@ -261,67 +278,45 @@
 		}
 	}
 
-	@media (hover: hover) and (pointer: fine) {
-		&:hover {
-			z-index: 2;
-			transform: translateY(-15px);
-			box-shadow: 0 16px 32px rgba(#000000, 0.48);
+	&:hover {
+		z-index: 2;
+		transform: translateY(-15px);
+		box-shadow: 0 16px 32px rgba(#000000, 0.48);
 
-			&::before {
-				width: 100%;
-				height: 100%;
-				transform: translate(15px, 15px);
-			}
+		&::before {
+			width: 100%;
+			height: 100%;
+			transform: translate(15px, 15px);
 
-			.project-link__img {
-				transform: scale(1.18);
-			}
-
-			.project__inner {
-				border-color: #20648f;
-				box-shadow: 4px 4px 18px rgba(#000000, 0.34);
-			}
-
-			.project-description {
-				transform: translateY(0);
-			}
-
-			.project-description__name span {
-				animation: LowLine 0.6s infinite;
+			@include tabletSmall {
+				transform: translateY(10px);
+				width: calc(100% - 10px);
 			}
 		}
-	}
 
-	@include mobile {
-		&-link {
-			height: 220px;
+		.project-link__img {
+			transform: scale(1.18);
 		}
 
-		&-description {
-			position: relative;
-			background: linear-gradient(180deg, rgba($bg-darker, 0.98) 0%, rgba($bg-darkest, 1) 100%);
-			backdrop-filter: none;
-			box-shadow: none;
-			transform: none;
+		.project-description,
+		.project__inner {
+			border-color: #20648f;
 		}
 
-		&-description__container {
-			padding: 20px;
+		.project__inner {
+			box-shadow: 4px 4px 18px rgba(#000000, 0.34);
+		}
+
+		.project-description {
+			transform: translateY(0);
+		}
+
+		.project-description__name span {
+			animation: LowLine 0.6s infinite;
 		}
 	}
 
 	img {
 		will-change: transform;
-	}
-}
-
-@media (prefers-reduced-motion: reduce) {
-	.project,
-	.project::before,
-	.project__inner,
-	.project-description,
-	.project img,
-	.project-description__action {
-		transition: none;
 	}
 }

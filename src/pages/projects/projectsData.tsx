@@ -19,8 +19,8 @@ const projectsData = [
 		name: 'Media Ecosystem',
 		year: '2026',
 		description:
-			'Designed and developed cross-industry startup. Built reusable architecture with animated routing, dynamic Markdown content, and serverless functionality.',
-		skills: ['React', 'TypeScript', 'SCSS', 'i18n', 'PWA', 'UI/UX'],
+			'Cross-industry startup. Modular SPA with animated routing. Dynamic Markdown rendering. Serverless functions. Multilingual support.',
+		skills: ['React', 'TypeScript', 'SCSS', 'i18n', 'PWA', 'UI/UX', 'Cloudflare'],
 		alt: 'Media Ecosystem startup homepage by Olexander Buhowski - Another Dimension Universe Vision, React TypeScript frontend developer portfolio, UI UX web design, PWA, SEO optimization, custom web development showcase',
 	},
 
@@ -30,15 +30,15 @@ const projectsData = [
 		urlCode: 'https://github.com/buhowski/car-service',
 		name: 'Car Service',
 		year: '2026',
-		description: 'Business website. Interactive visual components. Fully responsive layout.',
+		description: 'Business website. Responsive Design. JS Animations.',
 		skills: [
 			'Astro',
 			'TypeScript',
 			'SCSS',
-			'Pages CMS',
 			'Telegram Bot API',
 			'Accessibility',
 			'SEO',
+			'Pages CMS',
 		],
 		alt: 'Business website for an automotive car repair service in Lviv, Ukraine. Animated interactive web design using Astro, TypeScript, SCSS, Pages CMS for frontend developer portfolio project, custom web development showcase by Olexander Buhowski',
 	},
