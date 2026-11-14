@@ -23,10 +23,11 @@
 	width: 100%;
 	position: relative;
 	border-radius: var(--radius);
+	box-shadow: 0 10px 40px rgba(#000000, 0.44);
+	will-change: transform;
 	transition:
 		transform $transition-l cubic-bezier(0.2, 0.75, 0.25, 1),
 		box-shadow $transition-l cubic-bezier(0.2, 0.75, 0.25, 1);
-	box-shadow: 0 10px 28px rgba(#000000, 0.48);
 
 	@include tabletSmall {
 		display: flex;
