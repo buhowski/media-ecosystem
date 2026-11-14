@@ -161,6 +161,31 @@ $burger-transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 	}
 }
 
+@mixin link-after-icon(
+	$icon,
+	$size: 16px,
+	$margin-inline: 8px 14px,
+	$transform: translateY(-0.5px),
+	$opacity: 0.68,
+	$color: currentColor
+) {
+	&::after {
+		content: '';
+		display: inline-block;
+		flex-shrink: 0;
+		line-height: 1;
+		width: $size;
+		height: $size;
+		margin-inline: $margin-inline;
+		transform: $transform;
+		background-color: $color;
+		mask: $icon no-repeat center / contain;
+		-webkit-mask: $icon no-repeat center / contain;
+		opacity: $opacity;
+		transition: opacity $transition-s;
+	}
+}
+
 // BG gradient for flying block
 $deg-s: 135deg;
 $deg-l: 165deg;
