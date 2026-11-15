@@ -2,7 +2,7 @@ import bgFaberBooks from './images/faber-books.jpg';
 import bgCarService from './images/sto-porshen-lviv-ukraine-car-service-interactive-business-website-poster.jpg';
 import bgBentley from './images/bentley-skinner.jpg';
 import bgStartup from '../../assets/startup/counterculture-ecosystem-universe-another-dimension-startup-vision-by-olexander-buhowski.jpg';
-import nascentdesign from './images/nascent-design-portfolio-frontend.jpg';
+
 import taylors from './images/taylors-estateagents.jpg';
 import wr from './images/west-riding.jpg';
 import mb from './images/markbuchananproperty.jpg';
@@ -19,8 +19,8 @@ const projectsData = [
 		name: 'Media Ecosystem',
 		year: '2026',
 		description:
-			'Cross-industry startup. Modular SPA with animated routing. Dynamic Markdown rendering. Serverless functions. Multilingual support.',
-		skills: ['React', 'TypeScript', 'SCSS', 'i18n', 'PWA', 'UI/UX', 'Cloudflare'],
+			'Cross-industry startup. Modular SPA with animated routing. Dynamic Markdown rendering. Serverless functions. Multilingual support. Canvas 2D drawing effect.',
+		skills: ['React', 'TypeScript', 'Canvas API', 'SCSS', 'i18n', 'PWA', 'UI/UX', 'Cloudflare'],
 		alt: 'Media Ecosystem startup homepage by Olexander Buhowski - Another Dimension Universe Vision, React TypeScript frontend developer portfolio, UI UX web design, PWA, SEO optimization, custom web development showcase',
 	},
 
@@ -30,7 +30,7 @@ const projectsData = [
 		urlCode: 'https://github.com/buhowski/car-service',
 		name: 'Car Service',
 		year: '2026',
-		description: 'Business website. Responsive Design. JS Animations.',
+		description: 'Business website. Responsive design. JavaScript animations.',
 		skills: [
 			'Astro',
 			'TypeScript',
@@ -44,21 +44,12 @@ const projectsData = [
 	},
 
 	{
-		img: nascentdesign,
-		url: `https://nascentdesign.com`,
-		name: 'Nascent Design',
-		year: '2022',
-		description: 'Fluid GSAP animations. Interactive visual components. Fully responsive layout.',
-		skills: ['JavaScript', 'GSAP', 'SCSS'],
-		alt: 'Nascent Design website homepage - GSAP animated interactive web design, JavaScript, SCSS frontend developer portfolio project, custom web development showcase by Olexander Buhowski',
-	},
-
-	{
 		img: wr,
 		url: 'https://west-riding.co.uk/',
 		name: 'West Riding',
 		year: '2025',
-		description: 'Custom WordPress e-commerce. Conversion-focused UI/UX. Optimized PHP backend.',
+		description:
+			'Custom WordPress theme. Conversion-focused UI/UX. Responsive layouts and PHP development.',
 		skills: ['JavaScript', 'SCSS', 'WordPress', 'PHP'],
 		alt: 'Looking for trusted estate agents in Saddleworth? We are passionate about property and providing a tailored solution to selling your home.',
 	},
@@ -68,19 +59,10 @@ const projectsData = [
 		url: 'https://taylors-estateagents.co.uk/',
 		name: 'Taylors Estate Agents',
 		year: '2024',
-		description: 'Custom WordPress e-commerce. Conversion-focused UI/UX. Optimized PHP backend.',
+		description:
+			'Custom WordPress theme. Conversion-focused UI/UX. Responsive layouts and PHP development.',
 		skills: ['JavaScript', 'SCSS', 'WordPress', 'PHP'],
 		alt: 'Taylors Estate Agents, specialising in residential sales, lettings in Stourbridge, Kingswinford, Halesowen, Sedgley, Brierley Hill, Bearwood West Midland.',
-	},
-
-	{
-		img: mb,
-		url: 'https://markbuchananproperty.co.uk/',
-		name: 'Mark Buchanan',
-		year: '2024',
-		description: 'Custom WordPress e-commerce. Conversion-focused UI/UX. Optimized PHP backend.',
-		skills: ['JavaScript', 'SCSS', 'WordPress', 'PHP'],
-		alt: 'Mark Buchanan property e-commerce website - WordPress PHP custom web development, responsive UI UX design, real estate frontend portfolio project by Olexander Buhowski',
 	},
 
 	{
@@ -88,9 +70,21 @@ const projectsData = [
 		url: 'https://homesbyvictoria.co.uk/',
 		name: 'Homes By Victoria',
 		year: '2024',
-		description: 'Custom WordPress e-commerce. Conversion-focused UI/UX. Optimized PHP backend.',
+		description:
+			'Custom WordPress theme. Conversion-focused UI/UX. Responsive layouts and PHP development.',
 		skills: ['JavaScript', 'SCSS', 'WordPress', 'PHP'],
 		alt: 'Homes By Victoria real estate e-commerce website homepage - custom WordPress web development, SCSS PHP UI UX design, frontend portfolio project by Olexander Buhowski',
+	},
+
+	{
+		img: mb,
+		url: 'https://markbuchananproperty.co.uk/',
+		name: 'Mark Buchanan',
+		year: '2024',
+		description:
+			'Custom WordPress theme. Conversion-focused UI/UX. Responsive layouts and PHP development.',
+		skills: ['JavaScript', 'SCSS', 'WordPress', 'PHP'],
+		alt: 'Mark Buchanan property e-commerce website - WordPress PHP custom web development, responsive UI UX design, real estate frontend portfolio project by Olexander Buhowski',
 	},
 
 	{
@@ -98,7 +92,8 @@ const projectsData = [
 		url: 'https://www.bentley-skinner.co.uk',
 		name: 'Bentley & Skinner',
 		year: '2021',
-		description: 'Pixel-perfect e-commerce. Barba.js transitions. GSAP Scroll Triggers.',
+		description:
+			'Custom WordPress e-commerce theme. Pixel-perfect responsive UI. Barba.js page transitions. GSAP ScrollTrigger animations.',
 		skills: ['JavaScript', 'Barba.js', 'GSAP', 'SCSS', 'WordPress'],
 		alt: 'Bentley and Skinner luxury jewelry e-commerce website - custom WordPress web design, GSAP Barba.js smooth page transitions, frontend developer portfolio showcase by Olexander Buhowski',
 	},
@@ -108,8 +103,9 @@ const projectsData = [
 		url: 'https://www.faber.co.uk/',
 		name: 'Faber',
 		year: '2021',
-		description: 'High-traffic publishing e-commerce. Pixel-perfect layout. GSAP animations.',
-		skills: ['JavaScript', 'GSAP', 'SCSS', 'WordPress', 'Pixel Perfect'],
+		description:
+			'Custom WordPress e-commerce theme. Pixel-perfect responsive UI. GSAP ScrollTrigger animations.',
+		skills: ['JavaScript', 'GSAP', 'SCSS', 'WordPress'],
 		alt: 'Faber Books publisher e-commerce website homepage - pixel perfect WordPress web development, GSAP animations, responsive UI UX design, frontend portfolio project by Olexander Buhowski',
 	},
 
@@ -118,8 +114,9 @@ const projectsData = [
 		url: 'https://www.h2oluxembourg.com/',
 		name: 'H2O Luxembourg',
 		year: '2019',
-		description: 'Refactored legacy codebase. Fluid mouse interactions. Scroll animations.',
-		skills: ['jQuery', 'JavaScript', 'SCSS', 'Animation'],
+		description:
+			'Refactored legacy codebase. Interactive water ripple effects. JavaScript animations.',
+		skills: ['jQuery', 'WebGL', 'JavaScript', 'SCSS'],
 		alt: 'H2O Luxembourg property e-commerce website - WordPress PHP custom web development, responsive UI UX design, real estate frontend portfolio project by Olexander Buhowski',
 	},
 ];

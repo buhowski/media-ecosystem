@@ -34,7 +34,7 @@ const About = () => {
 					<img
 						className='about-info__img'
 						src={basePhoto}
-						alt='Portrait of Olexander Tsiomakh (Олександр Цьомах, Oleksandr Tsomakh, Alexander Tsiomakh), also known as Olexander Buhowski (Олександр Буховський, Buhowski, Bukowski, Буховски), Front End Developer, Storyteller, and Narrative Designer.'
+						alt='Portrait of Olexander Tsiomakh (Олександр Цьомах), also known as Olexander Buhowski (Олександр Буховскі) — Explorer, Developer, Storyteller, and Narrative Designer.'
 					/>
 				</div>
 
