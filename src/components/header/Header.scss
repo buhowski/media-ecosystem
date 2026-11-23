@@ -24,7 +24,7 @@
 .logo-link {
 	padding: 15px 0;
 	width: 195px;
-	transition: 0.2s;
+	transition: transform 0.25s;
 
 	&:active {
 		transform: scale(0.96);

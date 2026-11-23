@@ -1,37 +1,5 @@
-// Scrollbar styles
-$scrollbar-bg: transparent;
-$scrollbar-thumb: rgba(#c2c7cf, 0.2);
-$scrollbar-thumb-hover: rgba(#0082d8, 0.3);
-$scrollbar-radius: 10px;
-$scrollbar-width: 2px;
-$scrollbar-mob-width: 1px;
-
 :root {
 	color-scheme: dark light;
-}
-
-::-webkit-scrollbar {
-	width: $scrollbar-width;
-	height: $scrollbar-width;
-
-	@include tabletBig {
-		width: $scrollbar-mob-width;
-		height: $scrollbar-mob-width;
-	}
-}
-
-::-webkit-scrollbar-track {
-	border-radius: $scrollbar-radius;
-	background: $scrollbar-bg;
-}
-
-::-webkit-scrollbar-thumb {
-	background: $scrollbar-thumb;
-	border-radius: $scrollbar-radius;
-
-	&:hover {
-		background-color: $scrollbar-thumb-hover;
-	}
 }
 
 body {
@@ -42,42 +10,13 @@ body {
 	position: relative;
 }
 
+html,
 body,
 .mobile-menu__content,
 .table-content__inner {
-	overflow-y: auto;
 	scrollbar-gutter: stable;
-
-	// Firefox (and some other Gecko-based browsers)
-	@supports (-moz-appearance: none) {
-		scrollbar-width: thin;
-		scrollbar-color: $scrollbar-thumb $scrollbar-bg;
-	}
-
-	// WebKit (Chrome, Safari, Edge, iOS)
-	&::-webkit-scrollbar {
-		width: $scrollbar-width;
-		height: $scrollbar-width;
-
-		@include tabletBig {
-			width: $scrollbar-mob-width;
-			height: $scrollbar-mob-width;
-		}
-	}
-
-	&::-webkit-scrollbar-track {
-		border-radius: $scrollbar-radius;
-		background: $scrollbar-bg;
-	}
-
-	&::-webkit-scrollbar-thumb {
-		background: $scrollbar-thumb;
-		border-radius: $scrollbar-radius;
-
-		&:hover {
-			background-color: $scrollbar-thumb-hover;
-		}
-	}
+	scrollbar-width: thin;
+	scrollbar-color: rgba(#9fa6b2, 0.16) transparent;
 }
 
 #root,
