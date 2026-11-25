@@ -672,6 +672,12 @@
 			z-index: -1;
 		}
 
+		svg {
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+
 		.play-circle {
 			fill: transparent;
 		}

@@ -4,7 +4,7 @@ import './Socials.scss';
 interface SocialItem {
 	link: string;
 	title: string;
-	icon: React.ReactNode;
+	icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
 	id: string;
 }
 
@@ -24,16 +24,19 @@ const Socials: React.FC<SocialsProps> = ({ socialData, items }) => {
 
 	return (
 		<div className='contact-menu'>
-			{displayData.map(({ link, title, icon, id }, index) => (
+			{displayData.map(({ link, title, icon: Icon, id }, index) => (
 				<a
 					className='contact-menu__item'
 					key={id || index}
 					href={link}
 					target='_blank'
 					rel='noopener noreferrer'
+					aria-label={title}
 				>
 					<span className='title'>{title}</span>
-					<span className='contact-menu__icon'>{icon}</span>
+					<span className='contact-menu__icon'>
+						<Icon aria-hidden='true' />
+					</span>
 				</a>
 			))}
 		</div>

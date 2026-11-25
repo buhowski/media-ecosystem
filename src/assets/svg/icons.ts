@@ -1,0 +1,10 @@
+export { ReactComponent as ArrowLeftIcon } from './arrow-left.svg';
+export { ReactComponent as CvIcon } from './cv.svg';
+export { ReactComponent as DonateIcon } from './donate.svg';
+export { ReactComponent as GithubIcon } from './github.svg';
+export { ReactComponent as HeaderLogo } from './header-logo.svg';
+export { ReactComponent as InstagramIcon } from './instagram.svg';
+export { ReactComponent as LinkedInIcon } from './linkedin.svg';
+export { ReactComponent as MailIcon } from './mail.svg';
+export { ReactComponent as PlayIcon } from './play.svg';
+export { ReactComponent as TelegramIcon } from './telegram.svg';

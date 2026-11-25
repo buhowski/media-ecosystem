@@ -9,8 +9,8 @@ interface BackButtonProps {
 
 const BackButton: React.FC<BackButtonProps> = ({ to, className }) => {
 	return (
-		<NavLink to={to} className={className || 'idea-back'}>
-			{ArrowLeftIcon}
+		<NavLink to={to} className={className || 'idea-back'} aria-label='Back'>
+			<ArrowLeftIcon aria-hidden='true' />
 
 			<span>Back</span>
 		</NavLink>

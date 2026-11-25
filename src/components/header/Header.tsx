@@ -4,7 +4,7 @@ import { pathToVision, pathToAbout, pathToProjects } from '../urlsData';
 import { useTabletQuery } from '../../config/useMediaQuery';
 import Socials from '../socials/Socials';
 import socialData from '../socials/socialData';
-import { headerLogo } from '../../assets/svg/icons';
+import { HeaderLogo } from '../../assets/svg/icons';
 import { isPathActive } from '../../config/pathUtils';
 import { startupsMap } from '../../pages/startups/startupsMap';
 import { fastScrollTo, toggleScrollLock } from '../../pages/startups/helpers/navigationHelper';
@@ -72,7 +72,7 @@ const Header = () => {
 	const LogoNavLink = () => {
 		return (
 			<NavLink className='logo-link' to='/' aria-label={nickName}>
-				{headerLogo}
+				<HeaderLogo aria-hidden='true' />
 			</NavLink>
 		);
 	};

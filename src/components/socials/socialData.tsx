@@ -10,7 +10,7 @@ import {
 interface SocialItem {
 	link: string;
 	title: string;
-	icon: React.ReactNode;
+	icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
 	id: string;
 }
 

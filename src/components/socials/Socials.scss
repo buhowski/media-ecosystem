@@ -53,6 +53,12 @@ $social-size: 60px;
 	&__icon {
 		display: block;
 		width: 26px;
+
+		svg {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
 	}
 
 	svg {

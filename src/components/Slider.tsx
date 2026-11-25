@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback, useRef, useMemo } from 'react';
 import PopupContacts from './PopupContacts';
 import { useTabletLargeQuery } from '../config/useMediaQuery';
-import { playIcon } from '../assets/svg/playIcon';
+import { PlayIcon } from '../assets/svg/icons';
 import { SliderProps, VideoPreviewProps } from '../types/common';
 import { useVideoPlayback } from '../pages/startups/helpers/VideoPlaybackContext';
 import Preloader from './Preloader';
@@ -51,7 +51,9 @@ const VideoPreview: React.FC<VideoPreviewProps> = ({
 
 		<p className='video-preview__title'>{itemCaption}</p>
 
-		<div className='video-preview__svg'>{playIcon}</div>
+		<div className='video-preview__svg'>
+			<PlayIcon aria-hidden='true' />
+		</div>
 	</div>
 );
 

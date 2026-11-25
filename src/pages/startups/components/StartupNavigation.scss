@@ -173,6 +173,7 @@ $nav-top: 2px;
 
 	svg {
 		width: 18px;
+		height: auto;
 		fill: currentColor;
 
 		@include tabletBig {
