@@ -41,8 +41,15 @@
 	svg,
 	img {
 		pointer-events: none;
-		filter: drop-shadow(0 0 5px rgba(#000000, 0.35));
 		will-change: transform;
+	}
+
+	img {
+		filter: drop-shadow(0 2px 12px rgba(#000000, 0.26));
+	}
+
+	svg {
+		filter: drop-shadow(0 2px 8px rgba(#000000, 0.9));
 	}
 
 	.title {
@@ -53,7 +60,7 @@
 		width: 64%;
 		text-align: center;
 		font-weight: 600;
-		text-shadow: 0 1px 6px rgba(#000000, 0.35);
+		text-shadow: nav-text-shadow();
 		backface-visibility: hidden;
 
 		@include mobile {

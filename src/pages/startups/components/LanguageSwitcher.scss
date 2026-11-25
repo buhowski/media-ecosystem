@@ -62,6 +62,7 @@ $lang-radius: 100px;
 		padding: 14px 10px 13px;
 		line-height: 1;
 		font-weight: bold;
+
 		transition:
 			color $transition-s,
 			transform $transition-s,
@@ -85,6 +86,7 @@ $lang-radius: 100px;
 		&.active {
 			color: $color-active-lang;
 			pointer-events: none;
+			text-shadow: nav-text-shadow();
 		}
 
 		span {

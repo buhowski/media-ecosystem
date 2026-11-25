@@ -8,7 +8,7 @@ const EXPORT_URL = `https://docs.google.com/document/d/${FILE_ID}/export?format=
 const FILE_SRC = `https://drive.google.com/file/d/${FILE_ID}/preview?rm=minimal`;
 const downloadPDF = '/api/cv';
 
-const CVActions = ({ link, downloadFile }: { link: string; downloadFile: string }) => {
+const CVActions = ({ downloadFile }: { downloadFile: string }) => {
 	const [isDownloading, setIsDownloading] = useState(false);
 
 	// check proxy availability before download, fallback to direct link on error
@@ -36,25 +36,6 @@ const CVActions = ({ link, downloadFile }: { link: string; downloadFile: string 
 
 	return (
 		<nav className='resume__actions'>
-			{/* <a
-				href={link}
-				target='_blank'
-				rel='noopener noreferrer'
-				className='resume__btn'
-				title='View Portfolio'
-			>
-				<svg
-					xmlns='http://www.w3.org/2000/svg'
-					viewBox='0 0 576 512'
-					width='20'
-					height='20'
-					fill='currentColor'
-				>
-					<path d='M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.4 78.1-95.4 92.9-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.8-35.7-46.1-87.7-92.9-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64a64 64 0 1 0 0 128 64 64 0 1 0 0-128z' />
-				</svg>
-				Portfolio
-			</a> */}
-
 			<a
 				href={downloadFile}
 				onClick={handleDownload}
@@ -84,7 +65,7 @@ const CVPage = () => {
 		<div className={`resume ${loaded ? 'is-loaded' : ''}`}>
 			<PageHelmet metaTags={cvMetaTags} />
 
-			<CVActions link={'/'} downloadFile={downloadPDF} />
+			<CVActions downloadFile={downloadPDF} />
 
 			{!loaded && <Preloader />}
 

@@ -1,3 +1,8 @@
+// Header text shadows
+@function nav-text-shadow($color: rgba(#000000, 0.72)) {
+	@return 0 2px 4px $color;
+}
+
 // General mixins
 @mixin squareSize($size) {
 	width: $size;
@@ -37,6 +42,7 @@ $burger-transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 		border-bottom: $border-width solid $color;
 		opacity: 1;
 		transform: rotate(0deg);
+		box-shadow: nav-text-shadow(rgba(#000000, 0.34));
 		transition:
 			transform $burger-transition,
 			left $burger-transition,

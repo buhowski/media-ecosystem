@@ -23,7 +23,7 @@
 
 .logo-link {
 	padding: 15px 0;
-	width: 195px;
+	width: 200px;
 	transition: transform 0.25s;
 
 	&:active {
@@ -33,6 +33,7 @@
 	svg {
 		width: 100%;
 		height: auto;
+		filter: drop-shadow(nav-text-shadow());
 	}
 
 	&__tag {
@@ -82,6 +83,7 @@
 	font-size: 23px;
 	letter-spacing: 4px;
 	font-family: $LouisGeorgeCafBold;
+	text-shadow: nav-text-shadow();
 
 	span {
 		display: block;

@@ -312,7 +312,7 @@ $nav-top: 2px;
 		&.active {
 			color: $light-color;
 			text-transform: uppercase;
-			text-shadow: 0 0 8px rgba(#000000, 0.6);
+			text-shadow: nav-text-shadow();
 
 			&::before {
 				transform: scale(1, 1) translateY(0);

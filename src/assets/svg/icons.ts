@@ -8,3 +8,10 @@ export { ReactComponent as LinkedInIcon } from './linkedin.svg';
 export { ReactComponent as MailIcon } from './mail.svg';
 export { ReactComponent as PlayIcon } from './play.svg';
 export { ReactComponent as TelegramIcon } from './telegram.svg';
+
+// About page
+export { ReactComponent as BackpackIcon } from './backpack.svg';
+export { ReactComponent as BrainIcon } from './brain.svg';
+export { ReactComponent as KeyboardIcon } from './keyboard.svg';
+export { ReactComponent as RootsIcon } from './roots.svg';
+export { ReactComponent as WriterIcon } from './writer.svg';

@@ -52,7 +52,7 @@
 		}
 
 		@include mobile {
-			font-size: 50px;
+			font-size: 49px;
 		}
 
 		span {
@@ -180,10 +180,10 @@ canvas {
 		background: inherit;
 		z-index: -1;
 		pointer-events: none;
-		filter: drop-shadow(0 -1px 8px rgba(#000000, 0.24));
+		filter: drop-shadow(0 -4px 20px rgba(#000000, 0.22));
 
 		@include tabletBig {
-			filter: drop-shadow(0 -1px 5px rgba(#000000, 0.24));
+			filter: drop-shadow(0 -2px 12px rgba(#000000, 0.22));
 		}
 	}
 
