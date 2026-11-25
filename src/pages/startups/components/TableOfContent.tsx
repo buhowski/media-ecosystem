@@ -4,6 +4,7 @@ import { LANGUAGES, TocProps } from '../../../types/common';
 import { useTabletLargeQuery } from '../../../config/useMediaQuery';
 
 const TOC_PADDING_TOP = 65;
+const TOC_TITLE = 'On This Page';
 
 const TableOfContent: React.FC<TocProps> = ({
 	onSelectIndex,
@@ -93,7 +94,8 @@ const TableOfContent: React.FC<TocProps> = ({
 			<button
 				className='table-content__btn'
 				onClick={toggleToc}
-				aria-label='Toggle Table of Contents'
+				aria-label={`${isTocOpen ? 'Close' : 'Open'} On This Page navigation`}
+				aria-expanded={isTocOpen}
 			>
 				<mark>
 					<span></span>
@@ -104,11 +106,11 @@ const TableOfContent: React.FC<TocProps> = ({
 					<span></span>
 				</mark>
 
-				<h3>Table of Content</h3>
+				<h3>{TOC_TITLE}</h3>
 			</button>
 
 			<div className='table-content__list' ref={listRef} style={{ height: `${listHeight}px` }}>
-				<h3 className='table-content__title'>Table of Content</h3>
+				<h3 className='table-content__title'>{TOC_TITLE}</h3>
 
 				<div
 					className='table-content__container'

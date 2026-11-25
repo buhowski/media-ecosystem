@@ -132,7 +132,7 @@ export interface SliderProps extends WithLanguage {
 	slides: SlideItem[];
 }
 
-// Table of Content component props
+// Table of Contents component props
 export interface TocProps {
 	onSelectIndex: (id: string) => void;
 	activeHeadingId: string | null;
