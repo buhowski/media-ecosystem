@@ -1,5 +1,7 @@
 :root {
-	color-scheme: dark light;
+	color-scheme: dark;
+	scrollbar-color: rgba(#9fa6b2, 0.16) transparent;
+	scrollbar-gutter: stable;
 }
 
 body {
@@ -8,15 +10,6 @@ body {
 	color: $body-color;
 	font-family: $font-primary;
 	position: relative;
-}
-
-html,
-body,
-.mobile-menu__content,
-.table-content__inner {
-	scrollbar-gutter: stable;
-	scrollbar-width: thin;
-	scrollbar-color: rgba(#9fa6b2, 0.16) transparent;
 }
 
 #root,

@@ -17,10 +17,10 @@ const projectsData = [
 		url: pathToVision,
 		urlCode: 'https://github.com/buhowski/media-ecosystem',
 		name: 'Media Ecosystem',
-		year: '2026',
+		year: '🧠',
 		description:
-			'Cross-industry startup. Modular SPA with animated routing. Dynamic Markdown rendering. Serverless functions. Multilingual support. Canvas 2D drawing effect.',
-		skills: ['React', 'TypeScript', 'Canvas API', 'SCSS', 'i18n', 'PWA', 'UI/UX', 'Cloudflare'],
+			'Cross-industry startups. Modular SPA with animated routing. Multilingual Markdown rendering with dynamic table of contents. Interactive Canvas 2D brush-reveal effects. Cloudflare Functions. UI/UX design.',
+		skills: ['React', 'TypeScript', 'Canvas API', 'SCSS', 'i18n', 'PWA', 'Cloudflare', 'UI/UX'],
 		alt: 'Media Ecosystem startup homepage by Olexander Buhowski - Another Dimension Universe Vision, React TypeScript frontend developer portfolio, UI UX web design, PWA, SEO optimization, custom web development showcase',
 	},
 
@@ -28,9 +28,10 @@ const projectsData = [
 		img: bgCarService,
 		url: `https://sto-porshen.pages.dev`,
 		urlCode: 'https://github.com/buhowski/car-service',
-		name: 'Car Service',
+		name: 'Automotive Service',
 		year: '2026',
-		description: 'Business website. Responsive design. JavaScript animations.',
+		description:
+			'Responsive landing page. JavaScript animations. Headless CMS integration. Accessibility-focused UI. SEO optimization. AI-assisted development.',
 		skills: [
 			'Astro',
 			'TypeScript',

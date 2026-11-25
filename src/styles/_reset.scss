@@ -1,3 +1,9 @@
+* {
+	box-sizing: border-box;
+	scrollbar-width: thin;
+	-webkit-tap-highlight-color: transparent;
+}
+
 html,
 body,
 div,
@@ -25,11 +31,6 @@ a {
 	border: 0;
 	vertical-align: baseline;
 	text-decoration: none;
-}
-
-* {
-	box-sizing: border-box;
-	-webkit-tap-highlight-color: transparent;
 }
 
 ul {

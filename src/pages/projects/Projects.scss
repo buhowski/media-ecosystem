@@ -187,7 +187,7 @@
 			gap: 6px;
 
 			&:hover {
-				.project-description__name {
+				.project-description__name span {
 					color: $h1-color;
 				}
 			}
@@ -205,6 +205,8 @@
 			white-space: nowrap;
 
 			span {
+				margin-left: 1px;
+				display: inline-block;
 				color: $link-color;
 				transition: color $transition-s;
 			}
@@ -214,8 +216,9 @@
 		&__year,
 		&__items span {
 			display: inline-block;
+			font-variant-numeric: tabular-nums;
 			flex-shrink: 0;
-			padding: 4px 12px;
+			padding: 6px 12px 5px;
 			border: 1px solid rgba(255, 255, 255, 0.14);
 			border-radius: 100px;
 			background: rgba(255, 255, 255, 0.065);
@@ -223,20 +226,56 @@
 			font-size: 12px;
 			font-family: $LouisGeorgeCafBold;
 			letter-spacing: 0.02em;
+			line-height: 1;
 		}
 
 		// .project-description__year
 		&__year {
 			letter-spacing: 0.1em;
-			padding-block: 5px;
+			padding-block: 7px 6px;
+			max-width: 66px;
+			overflow: hidden;
+
+			svg {
+				width: 16px;
+			}
 		}
 
 		// .project-description__text
 		&__text {
-			margin-bottom: 20px;
+			--lh: 1.6;
+			--lines: 6;
+			--rightSpace: 15px;
+
 			color: rgba($body-color, 0.82);
+			margin-bottom: 20px;
 			font-size: 14px;
-			line-height: 1.6;
+			line-height: var(--lh);
+			max-height: calc(var(--lh) * var(--lines) * 1em);
+			padding-right: var(--rightSpace);
+			margin-right: calc(var(--rightSpace) * -1);
+			overflow-y: auto;
+			overscroll-behavior: contain;
+
+			@include tabletSmall {
+				overflow-y: visible;
+				max-height: none;
+			}
+		}
+
+		&__text-wrapper {
+			&.is-auto-scrolling {
+				max-height: calc(14px * 1.6 * 6);
+				overflow: hidden;
+
+				.project-description__text {
+					animation: project-description-scroll 12s ease-in-out infinite alternate;
+				}
+
+				&:hover .project-description__text {
+					animation-play-state: paused;
+				}
+			}
 		}
 
 		// .project-description__items
@@ -294,6 +333,23 @@
 				outline: 2px solid $blue-light;
 				outline-offset: 3px;
 			}
+		}
+	}
+}
+
+@keyframes project-description-scroll {
+	to {
+		transform: translateY(calc(-1 * var(--scroll-distance)));
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.project-description__text-wrapper.is-auto-scrolling {
+		max-height: calc(14px * 1.6 * 6);
+		overflow-y: auto;
+
+		.project-description__text {
+			animation: none;
 		}
 	}
 }
