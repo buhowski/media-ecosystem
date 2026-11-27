@@ -31,7 +31,7 @@ const projectsData = [
 		name: 'Automotive Service',
 		year: '2026',
 		description:
-			'Responsive landing page. JavaScript animations. Headless CMS integration. Accessibility-focused UI. SEO optimization. AI-assisted development.',
+			'Responsive landing page. JavaScript animations. Headless CMS integration. Accessibility-focused UI. SEO optimization.',
 		skills: [
 			'Astro',
 			'TypeScript',
